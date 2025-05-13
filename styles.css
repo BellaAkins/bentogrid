@@ -327,7 +327,6 @@ h1 {
   .fourth {
     padding-left: 0;
     gap: 24px;
-    background-color: red;
   }
   .fourth .card-title {
     text-align: center;
