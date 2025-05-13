@@ -33,7 +33,7 @@ main {
   width: 100%;
   max-width: 1120px;
   grid-template-areas: "groupcards first first fourth" "groupcards second third fourth" "groupcards six five five";
-  grid-template-columns: repeat(4, minmax(min-height, 256px));
+  grid-template-columns: repeat(4, minmax(min-content, 256px));
   grid-template-rows: 323px 247px 247px;
   gap: 32px;
 }
@@ -48,7 +48,7 @@ img {
 
 h1,
 .heading-2,
-.heading-3,
+.title-3,
 .card-title {
   font-weight: 500;
   line-height: 95%;
@@ -58,7 +58,7 @@ h1,
   font-size: 40px;
 }
 
-.heading-3 {
+.title-3 {
   font-size: 35px;
 }
 
@@ -78,10 +78,6 @@ h1,
   justify-content: center;
   align-items: center;
 }
-.first img {
-  max-width: 190px;
-  margin: 22px 0 0 0;
-}
 .first h1 {
   font-size: 60px;
   color: var(--color-white);
@@ -89,6 +85,10 @@ h1,
 }
 .first h1 .coloryellow {
   color: var(--color-yellow);
+}
+.first img {
+  max-width: 190px;
+  margin: 22px 0 0;
 }
 .first p {
   color: var(--color-yellow);
@@ -100,15 +100,15 @@ h1,
   padding: 24px 0 24px 24px;
 }
 .second img {
+  width: 100%;
+  height: 60px;
   background: url("./assets/images/illustration-multiple-platforms.webp") top
     left no-repeat;
   background-size: cover;
-  width: 100%;
-  height: 60px;
 }
 .second .card-title {
+  margin-right: 24px;
   margin-top: 20px;
-  margin-top: 26px;
 }
 
 .third {
@@ -135,12 +135,12 @@ h1,
   padding-left: 32px;
 }
 .fourth img {
+  margin: 24px 0 26px;
   background-image: url("./assets/images/illustration-easy-to-use.webp") left
     no-repeat;
   background-size: cover;
   width: 100%;
   height: 318px;
-  margin: 24px 0 24px;
 }
 .fourth p {
   margin-right: 30px;
@@ -151,7 +151,6 @@ h1,
   grid-area: five;
   background-color: var(--color-purple);
   display: flex;
-  justify-content: center;
   align-items: center;
   padding: 22px 24px;
   gap: 12px;
@@ -191,8 +190,7 @@ h1,
   flex-direction: column;
   gap: 32px;
 }
-
-.seventh {
+.groupcards .seventh {
   background-color: var(--color-yellow--light);
   display: flex;
   flex-direction: column;
@@ -200,33 +198,31 @@ h1,
   align-items: center;
   padding: 0 33px;
   gap: 22px;
-  max-height: 416px;
+  height: 100%;
 }
-.seventh .heading-3 {
-  line-height: 105%;
+.groupcards .seventh .title-3 {
   margin-top: 6px;
 }
-.seventh span {
+.groupcards .seventh span {
   color: var(--color-purple);
 }
-.seventh img {
+.groupcards .seventh img {
   width: 100%;
   max-width: 190px;
 }
-
-.eight {
+.groupcards .eight {
   background-color: var(--color-yellow);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 0 12px 20px 24px;
+  height: 100%;
 }
-.eight .heading-3 {
+.groupcards .eight .title-3 {
   margin-top: 28px;
-  line-height: 100%;
   margin-right: 24px;
 }
-.eight .image {
+.groupcards .eight .image {
   width: 100%;
   max-width: 220px;
 }
@@ -296,7 +292,7 @@ h1 {
     grid-template-columns: 1fr;
   }
   .heading-2,
-  .heading-3 {
+  .title-3 {
     font-size: 30px;
   }
   .card-title {
@@ -365,18 +361,18 @@ h1 {
   .sixth img {
     margin-top: 24px;
   }
-  .seventh {
+  .groupcards .seventh {
     align-items: self-start;
   }
-  .seventh .heading-3 {
+  .groupcards .seventh .title-3 {
     margin: 0;
     line-height: 95%;
   }
-  .eight {
+  .groupcards .eight {
     justify-content: flex-start;
     padding: 10px 24px;
   }
-  .eight .heading-3 {
+  .groupcards .eight .title-3 {
     margin: 0;
   }
 } /*# sourceMappingURL=main.css.map */
